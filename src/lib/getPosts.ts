@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
-type PostMeta = {
+export type PostMeta = {
   title: string;
   date: string;
   slug: string;
@@ -12,10 +12,11 @@ type PostMeta = {
   coverImage: string;
 };
 
-type Post = PostMeta & {
+export type Post = PostMeta & {
   content: string;
 };
 
+// Función sincrónica: lista todos los posts sin el contenido
 export function getAllPosts(): PostMeta[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
@@ -34,13 +35,20 @@ export function getAllPosts(): PostMeta[] {
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): Post {
+// Función asincrónica: obtiene 1 post completo con contenido
+export async function getPostBySlug(slug: string): Promise<Post | null> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
 
-  return {
-    ...(data as Omit<Post, 'content'>),
-    content,
-  };
+  try {
+    const fileContents = await fs.promises.readFile(fullPath, 'utf8');
+    const { data, content } = matter(fileContents);
+
+    return {
+      ...(data as Omit<Post, 'content'>),
+      content,
+    };
+  } catch (error) {
+    console.error(`Post not found: ${slug}`, error); // 👈 solución aquí
+    return null;
+  }
 }

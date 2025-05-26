@@ -8,8 +8,9 @@ type Props = {
   };
 };
 
+// ⏬ Esta función SÍ debe ser async
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const post = await getPostBySlug(params.slug);
   if (!post) return { title: 'Post not found' };
 
   return {
@@ -18,8 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+// ⏬ También el componente principal debe ser async
+export default async function BlogPostPage({ params }: Props) {
+  const post = await getPostBySlug(params.slug); // ✅ usar await
 
   if (!post) return notFound();
 
