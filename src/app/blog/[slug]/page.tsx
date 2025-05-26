@@ -2,16 +2,20 @@ import { getPostBySlug } from '@/lib/getPosts';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-type Props = {
+interface PageParams {
   params: {
     slug: string;
   };
-};
+}
 
-// ⏬ Esta función SÍ debe ser async
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// ✅ Esta es la forma correcta en App Router
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
-  if (!post) return { title: 'Post not found' };
+  if (!post) {
+    return {
+      title: 'Post not found',
+    };
+  }
 
   return {
     title: post.title,
@@ -19,9 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// ⏬ También el componente principal debe ser async
-export default async function BlogPostPage({ params }: Props) {
-  const post = await getPostBySlug(params.slug); // ✅ usar await
+// ✅ También debe ser async
+export default async function BlogPostPage({ params }: PageParams) {
+  const post = await getPostBySlug(params.slug);
 
   if (!post) return notFound();
 
