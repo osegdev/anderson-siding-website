@@ -2,12 +2,9 @@ import { getPostBySlug } from '@/lib/getPosts';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug);
+// ✅ NO uses tipo Props. Define los parámetros directamente.
+export async function generateMetadata(props: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getPostBySlug(props.params.slug);
   if (!post) {
     return { title: 'Post not found' };
   }
