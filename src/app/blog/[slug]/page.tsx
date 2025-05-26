@@ -2,12 +2,8 @@ import { getPostBySlug } from '@/lib/getPosts';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug);
+export async function generateMetadata(context: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getPostBySlug(context.params.slug);
   if (!post) {
     return {
       title: 'Post not found',
@@ -20,7 +16,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) return notFound();
