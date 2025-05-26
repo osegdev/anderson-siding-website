@@ -2,14 +2,13 @@ import { getPostBySlug } from '@/lib/getPosts';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-interface PageParams {
+interface Props {
   params: {
     slug: string;
   };
 }
 
-// ✅ Esta es la forma correcta en App Router
-export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
   if (!post) {
     return {
@@ -23,8 +22,7 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   };
 }
 
-// ✅ También debe ser async
-export default async function BlogPostPage({ params }: PageParams) {
+export default async function BlogPostPage({ params }: Props) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) return notFound();
