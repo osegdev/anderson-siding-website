@@ -31,7 +31,10 @@ export default function PortfolioPage() {
     <>
       <Head>
         <title>Our Work – Anderson Siding and Construction Portfolio</title>
-        <meta name="description" content="Browse recent siding, gutter, and exterior construction projects completed across Illinois by Anderson Siding and Construction." />
+        <meta
+          name="description"
+          content="Browse recent siding, gutter, and exterior construction projects completed across Illinois by Anderson Siding and Construction."
+        />
       </Head>
 
       <main className="max-w-6xl mx-auto px-4 py-12">

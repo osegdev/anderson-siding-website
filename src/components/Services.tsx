@@ -2,11 +2,13 @@ export default function Services() {
   const services = [
     {
       title: 'Vinyl Siding',
-      description: 'Durable, low-maintenance siding solutions for residential and commercial properties.',
+      description:
+        'Durable, low-maintenance siding solutions for residential and commercial properties.',
     },
     {
       title: 'Soffit & Fascia',
-      description: 'Protect your roof and improve ventilation with professional soffit and fascia installation.',
+      description:
+        'Protect your roof and improve ventilation with professional soffit and fascia installation.',
     },
     {
       title: 'Gutter Installation',

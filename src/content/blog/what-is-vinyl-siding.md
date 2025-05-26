@@ -1,9 +1,9 @@
 ---
-title: "What is Vinyl Siding and Why It Matters"
-slug: "what-is-vinyl-siding"
-date: "2025-05-25"
-excerpt: "Vinyl siding is a popular and affordable exterior material for homeowners in Illinois. Learn how it works."
-coverImage: "/images/blog1.jpg"
+title: 'What is Vinyl Siding and Why It Matters'
+slug: 'what-is-vinyl-siding'
+date: '2025-05-25'
+excerpt: 'Vinyl siding is a popular and affordable exterior material for homeowners in Illinois. Learn how it works.'
+coverImage: '/images/blog1.jpg'
 ---
 
 ## What is Vinyl Siding?

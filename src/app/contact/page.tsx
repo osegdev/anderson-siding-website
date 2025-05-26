@@ -27,7 +27,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setStatus('success');
-        setTimeout(() => setStatus('idle'), 8000); 
+        setTimeout(() => setStatus('idle'), 8000);
         form.reset();
       } else {
         setStatus('error');
@@ -41,14 +41,19 @@ export default function ContactPage() {
     <>
       <Head>
         <title>Contact Anderson Siding and Construction</title>
-        <meta name="description" content="Reach out to Anderson Siding and Construction for a free siding consultation or estimate in Illinois." />
+        <meta
+          name="description"
+          content="Reach out to Anderson Siding and Construction for a free siding consultation or estimate in Illinois."
+        />
       </Head>
 
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-bold text-blue-800 mb-4">Contact Us</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block font-medium">Name</label>
+            <label htmlFor="name" className="block font-medium">
+              Name
+            </label>
             <input
               id="name"
               name="name"
@@ -59,7 +64,9 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block font-medium">Email</label>
+            <label htmlFor="email" className="block font-medium">
+              Email
+            </label>
             <input
               id="email"
               name="email"
@@ -70,7 +77,9 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label htmlFor="phone" className="block font-medium">Phone</label>
+            <label htmlFor="phone" className="block font-medium">
+              Phone
+            </label>
             <input
               id="phone"
               name="phone"
@@ -79,26 +88,23 @@ export default function ContactPage() {
               className="w-full border px-3 py-2 rounded"
             />
             <p className="text-xs text-gray-600 mt-1">
-              By providing your phone number, you agree to receive SMS updates related to your inquiry.
-              Message and data rates may apply.
+              By providing your phone number, you agree to receive SMS updates related to your
+              inquiry. Message and data rates may apply.
             </p>
           </div>
-          
+
           <div className="flex items-center">
-            <input
-              id="sms-consent"
-              name="smsConsent"
-              type="checkbox"
-              required
-              className="mr-2"
-            />
+            <input id="sms-consent" name="smsConsent" type="checkbox" required className="mr-2" />
             <label htmlFor="sms-consent" className="text-sm">
-              I consent to receive SMS messages from Anderson Siding and Construction regarding my inquiry.
+              I consent to receive SMS messages from Anderson Siding and Construction regarding my
+              inquiry.
             </label>
           </div>
 
           <div>
-            <label htmlFor="message" className="block font-medium">Message</label>
+            <label htmlFor="message" className="block font-medium">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
@@ -117,7 +123,7 @@ export default function ContactPage() {
 
           {status === 'success' && (
             <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-800 rounded shadow">
-              ✅ Thank you! Your message has been sent successfully. We'll contact you soon.
+              ✅ Thank you! Your message has been sent successfully. We&apos;ll contact you soon.
             </div>
           )}
 
