@@ -16,7 +16,7 @@ export type Post = PostMeta & {
   content: string;
 };
 
-// Función sincrónica: lista todos los posts sin el contenido
+// ✅ Sincrónico: devuelve todos los posts sin contenido
 export function getAllPosts(): PostMeta[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
@@ -35,20 +35,19 @@ export function getAllPosts(): PostMeta[] {
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-// Función asincrónica: obtiene 1 post completo con contenido
+// ✅ Asíncrono: obtiene un solo post completo, con manejo limpio de errores
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
-
   try {
-    const fileContents = await fs.promises.readFile(fullPath, 'utf8');
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
     return {
       ...(data as Omit<Post, 'content'>),
       content,
     };
-  } catch (error) {
-    console.error(`Post not found: ${slug}`, error); // 👈 solución aquí
+  } catch {
+    console.error(`Post not found: ${slug}`);
     return null;
   }
 }
