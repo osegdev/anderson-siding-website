@@ -1,22 +1,33 @@
 import { getPostBySlug } from '@/lib/getPosts';
 import { notFound } from 'next/navigation';
-import { remark } from 'remark';
-import html from 'remark-html';
+import type { Metadata } from 'next';
 
-type Props = { params: { slug: string } };
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 
-export default async function BlogPost({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
-  if (!post) return notFound();
+  if (!post) return { title: 'Post not found' };
 
-  const processedContent = await remark().use(html).process(post.content);
-  const contentHtml = processedContent.toString();
+  return {
+    title: post.title,
+    description: post.excerpt,
+  };
+}
+
+export default function BlogPostPage({ params }: Props) {
+  const post = getPostBySlug(params.slug);
+
+  if (!post) return notFound();
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-blue-800 mb-2">{post.title}</h1>
+      <h1 className="text-3xl font-bold text-blue-800 mb-4">{post.title}</h1>
       <p className="text-sm text-gray-600 mb-6">{post.date}</p>
-      <article className="prose prose-blue" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <article className="prose max-w-none prose-blue">{post.content}</article>
     </main>
   );
 }
