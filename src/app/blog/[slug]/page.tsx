@@ -2,13 +2,11 @@ import { getPostBySlug } from '@/lib/getPosts';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
   if (!post) {
     return {
@@ -22,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) return notFound();
