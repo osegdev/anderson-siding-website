@@ -1,13 +1,24 @@
 import { getPostBySlug } from '@/lib/getPosts';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
-type Props = {
-  params: {
-    slug: string;
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = await getPostBySlug(params.slug);
+  if (!post) {
+    return { title: 'Post not found' };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
   };
-};
+}
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) return notFound();
