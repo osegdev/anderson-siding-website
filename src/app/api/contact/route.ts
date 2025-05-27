@@ -1,11 +1,16 @@
+// src/app/api/contact/route.ts
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
-  const body = await req.json();
-  const { name, email, phone, message } = body;
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error('Missing RESEND_API_KEY in environment');
+    return NextResponse.json({ success: false, error: 'Internal server error' }, { status: 500 });
+  }
+
+  const resend = new Resend(apiKey);
+  const { name, email, phone, message } = await req.json();
 
   try {
     const data = await resend.emails.send({
@@ -21,10 +26,9 @@ export async function POST(req: Request) {
         <p>${message}</p>
       `,
     });
-
     return NextResponse.json({ success: true, data });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ success: false, error });
+    console.error('Error sending email with Resend:', error);
+    return NextResponse.json({ success: false, error: 'Failed to send email' }, { status: 502 });
   }
 }
