@@ -41,10 +41,7 @@ export default function ContactPage() {
     <>
       <Head>
         <title>Contact Anderson Siding and Construction</title>
-        <meta
-          name="description"
-          content="Reach out to Anderson Siding and Construction for a free siding consultation or estimate in Illinois."
-        />
+        <meta name="description" content="Reach out to Anderson Siding and Construction for a free siding consultation or estimate in Illinois." />
       </Head>
 
       <main className="max-w-2xl mx-auto p-6">
@@ -54,50 +51,28 @@ export default function ContactPage() {
             <label htmlFor="name" className="block font-medium">
               Name
             </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              required
-              className="w-full border px-3 py-2 rounded"
-            />
+            <input id="name" name="name" type="text" required className="w-full border px-3 py-2 rounded" />
           </div>
 
           <div>
             <label htmlFor="email" className="block font-medium">
               Email
             </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              className="w-full border px-3 py-2 rounded"
-            />
+            <input id="email" name="email" type="email" required className="w-full border px-3 py-2 rounded" />
           </div>
 
           <div>
             <label htmlFor="phone" className="block font-medium">
               Phone
             </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              required
-              className="w-full border px-3 py-2 rounded"
-            />
-            <p className="text-xs text-gray-600 mt-1">
-              By providing your phone number, you agree to receive SMS updates related to your
-              inquiry. Message and data rates may apply.
-            </p>
+            <input id="phone" name="phone" type="tel" required className="w-full border px-3 py-2 rounded" />
+            <p className="text-xs text-gray-600 mt-1">By providing your phone number, you agree to receive SMS updates related to your inquiry. Message and data rates may apply.</p>
           </div>
 
           <div className="flex items-center">
             <input id="sms-consent" name="smsConsent" type="checkbox" required className="mr-2" />
             <label htmlFor="sms-consent" className="text-sm">
-              I consent to receive SMS messages from Anderson Siding and Construction regarding my
-              inquiry.
+              I consent to receive SMS messages from Anderson Siding and Construction regarding my inquiry.
             </label>
           </div>
 
@@ -105,33 +80,18 @@ export default function ContactPage() {
             <label htmlFor="message" className="block font-medium">
               Message
             </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              required
-              className="w-full border px-3 py-2 rounded"
-            />
+            <textarea id="message" name="message" rows={4} required className="w-full border px-3 py-2 rounded" />
           </div>
 
-          <button
-            type="submit"
-            className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-          >
+          <button type="submit" className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
             Send Message
           </button>
 
           {status === 'success' && (
-            <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-800 rounded shadow">
-              ✅ Thank you! Your message has been sent successfully. We&apos;ll contact you soon.
-            </div>
+            <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-800 rounded shadow">✅ Thank you! Your message has been sent successfully. We&apos;ll contact you soon.</div>
           )}
 
-          {status === 'error' && (
-            <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-800 rounded shadow">
-              ❌ Something went wrong. Please try again later.
-            </div>
-          )}
+          {status === 'error' && <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-800 rounded shadow">❌ Something went wrong. Please try again later.</div>}
         </form>
       </main>
     </>

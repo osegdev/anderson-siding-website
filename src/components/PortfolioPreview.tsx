@@ -23,13 +23,7 @@ export default function PortfolioPreview() {
         <div className="grid gap-6 md:grid-cols-3">
           {projects.map((proj, index) => (
             <div key={index} className="bg-white rounded shadow overflow-hidden">
-              <Image
-                src={proj.image}
-                alt={proj.title}
-                width={500}
-                height={300}
-                className="object-cover w-full h-48"
-              />
+              <Image src={proj.image} alt={proj.title} width={500} height={300} className="object-cover w-full h-48" />
               <div className="p-4">
                 <h3 className="text-lg font-semibold">{proj.title}</h3>
               </div>

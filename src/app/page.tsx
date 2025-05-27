@@ -11,10 +11,7 @@ export default function HomePage() {
     <>
       <Head>
         <title>Anderson Siding and Construction – Illinois Siding Experts</title>
-        <meta
-          name="description"
-          content="Licensed siding contractors serving all of Illinois. Get a free quote today."
-        />
+        <meta name="description" content="Licensed siding contractors serving all of Illinois. Get a free quote today." />
       </Head>
       <Hero />
       <Services />

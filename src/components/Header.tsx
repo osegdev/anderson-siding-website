@@ -17,9 +17,7 @@ export default function Header() {
         {/* Izquierda: Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src={logo} alt="Anderson Logo" width={36} height={36} />
-          <span className="text-xl font-bold tracking-wide">
-            Anderson Siding & Construction LLC
-          </span>
+          <span className="text-xl font-bold tracking-wide">Anderson Siding & Construction LLC</span>
         </Link>
 
         {/* Derecha: Navegación + Teléfono en desktop */}
@@ -30,10 +28,7 @@ export default function Header() {
             <Link href="/about">About</Link>
             <Link href="/contractors">For Contractors</Link>
             <Link href="/blog">Blog</Link>
-            <Link
-              href="/contact"
-              className="hover:bg-white hover:text-blue-800 px-3 py-1 rounded border border-white transition"
-            >
+            <Link href="/contact" className="hover:bg-white hover:text-blue-800 px-3 py-1 rounded border border-white transition">
               Contact
             </Link>
           </nav>
@@ -47,9 +42,7 @@ export default function Header() {
 
         {/* Hamburguesa en móvil */}
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <button onClick={toggleMenu}>{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}</button>
         </div>
       </div>
 

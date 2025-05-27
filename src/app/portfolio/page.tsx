@@ -31,10 +31,7 @@ export default function PortfolioPage() {
     <>
       <Head>
         <title>Our Work – Anderson Siding and Construction Portfolio</title>
-        <meta
-          name="description"
-          content="Browse recent siding, gutter, and exterior construction projects completed across Illinois by Anderson Siding and Construction."
-        />
+        <meta name="description" content="Browse recent siding, gutter, and exterior construction projects completed across Illinois by Anderson Siding and Construction." />
       </Head>
 
       <main className="max-w-6xl mx-auto px-4 py-12">
@@ -42,13 +39,7 @@ export default function PortfolioPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((proj, index) => (
             <div key={index} className="bg-white rounded shadow overflow-hidden">
-              <Image
-                src={proj.image}
-                alt={proj.title}
-                width={600}
-                height={400}
-                className="object-cover w-full h-56"
-              />
+              <Image src={proj.image} alt={proj.title} width={600} height={400} className="object-cover w-full h-56" />
               <div className="p-4">
                 <h2 className="text-lg font-semibold">{proj.title}</h2>
                 <p className="text-sm text-gray-700 mt-1">{proj.description}</p>

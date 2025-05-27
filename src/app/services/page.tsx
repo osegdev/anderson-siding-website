@@ -6,8 +6,7 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Vinyl Siding',
-      description:
-        'Durable and low-maintenance siding solution available in various colors and finishes.',
+      description: 'Durable and low-maintenance siding solution available in various colors and finishes.',
     },
     {
       title: 'Soffit & Fascia',
@@ -19,8 +18,7 @@ export default function ServicesPage() {
     },
     {
       title: 'House Wrap',
-      description:
-        'A protective barrier that improves energy efficiency and prevents moisture intrusion.',
+      description: 'A protective barrier that improves energy efficiency and prevents moisture intrusion.',
     },
   ];
 
@@ -28,10 +26,7 @@ export default function ServicesPage() {
     <>
       <Head>
         <title>Services – Anderson Siding and Construction</title>
-        <meta
-          name="description"
-          content="Explore the exterior services offered by Anderson Siding and Construction including siding, gutters, soffit, fascia, and more."
-        />
+        <meta name="description" content="Explore the exterior services offered by Anderson Siding and Construction including siding, gutters, soffit, fascia, and more." />
       </Head>
 
       <main className="max-w-6xl mx-auto px-4 py-12">

@@ -8,9 +8,8 @@ export default function PrivacyPage() {
 
       <section className="space-y-6 text-gray-800 text-base">
         <p>
-          Anderson Siding and Construction (“we,” “our,” or “us”) is committed to protecting your
-          privacy. This Privacy Policy explains how we collect, use, and safeguard your information
-          when you visit our website.
+          Anderson Siding and Construction (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you
+          visit our website.
         </p>
 
         <h2 className="text-xl font-semibold text-blue-800">1. Information We Collect</h2>
@@ -23,28 +22,16 @@ export default function PrivacyPage() {
         <p>This may include your name, phone number, email, and project details.</p>
 
         <h2 className="text-xl font-semibold text-blue-800">2. How We Use Your Information</h2>
-        <p>
-          We use your information to provide services, respond to inquiries, and improve our
-          website. We do not sell or share your personal data for marketing.
-        </p>
+        <p>We use your information to provide services, respond to inquiries, and improve our website. We do not sell or share your personal data for marketing.</p>
 
         <h2 className="text-xl font-semibold text-blue-800">3. Cookies</h2>
-        <p>
-          We may use cookies to improve your experience. You can disable cookies in your browser
-          settings.
-        </p>
+        <p>We may use cookies to improve your experience. You can disable cookies in your browser settings.</p>
 
         <h2 className="text-xl font-semibold text-blue-800">4. Data Security</h2>
-        <p>
-          We implement reasonable measures to protect your information. However, no method is 100%
-          secure.
-        </p>
+        <p>We implement reasonable measures to protect your information. However, no method is 100% secure.</p>
 
         <h2 className="text-xl font-semibold text-blue-800">5. Third-Party Links</h2>
-        <p>
-          Our website may link to third-party sites. We are not responsible for their privacy
-          practices.
-        </p>
+        <p>Our website may link to third-party sites. We are not responsible for their privacy practices.</p>
 
         <h2 className="text-xl font-semibold text-blue-800">6. Your Rights</h2>
         <p>You may request access, correction, or deletion of your personal data. Contact us at:</p>
