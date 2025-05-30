@@ -67,6 +67,7 @@ export default function ContactPage() {
             </label>
             <input id="phone" name="phone" type="tel" required className="w-full border px-3 py-2 rounded" />
             <p className="text-xs text-gray-600 mt-1">By providing your phone number, you agree to receive SMS updates related to your inquiry. Message and data rates may apply.</p>
+            <p className="text-xs text-gray-600">Reply STOP to unsubscribe.</p>
           </div>
 
           <div className="flex items-center">

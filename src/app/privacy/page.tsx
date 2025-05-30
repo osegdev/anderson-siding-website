@@ -34,6 +34,7 @@ export default function PrivacyPage() {
         <p>Our website may link to third-party sites. We are not responsible for their privacy practices.</p>
 
         <h2 className="text-xl font-semibold text-blue-800">6. Your Rights</h2>
+        <p>You can opt out of SMS communication at any time by replying STOP.</p>
         <p>You may request access, correction, or deletion of your personal data. Contact us at:</p>
         <ul className="list-disc list-inside">
           <li>Email: andersonsidingconstruction@gmail.com</li>
