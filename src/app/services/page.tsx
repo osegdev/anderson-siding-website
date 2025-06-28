@@ -16,7 +16,7 @@ export default function ServicesPage() {
       ],
       benefits: 'Energy efficient, cost-effective, and virtually maintenance-free',
       icon: '🏠',
-      price: 'Starting from $8-12 per sq ft',
+      price: 'Competitive pricing - Free estimates',
     },
     {
       title: 'Soffit & Fascia Systems',
@@ -38,7 +38,7 @@ export default function ServicesPage() {
       features: ['Seamless aluminum gutters', 'Proper slope and drainage design', 'Heavy-duty hangers and brackets', 'Multiple color options available', 'Optional gutter guards and leaf protection'],
       benefits: 'Foundation protection and water damage prevention',
       icon: '🌧️',
-      price: '$6-10 per linear foot',
+      price: 'Competitive pricing - Free estimates',
     },
     {
       title: 'House Wrap & Insulation',
@@ -46,7 +46,7 @@ export default function ServicesPage() {
       features: ['High-performance house wrap materials', 'Vapor barrier installation', 'Thermal bridging prevention', 'Air sealing and weatherization', 'Energy efficiency improvements'],
       benefits: 'Lower energy bills and improved indoor comfort',
       icon: '🛡️',
-      price: '$1.50-3 per sq ft',
+      price: 'Competitive pricing - Free estimates',
     },
   ];
 
@@ -233,7 +233,7 @@ export default function ServicesPage() {
                 {
                   step: '01',
                   title: 'Free Consultation',
-                  description: 'Schedule your free estimate. We&apos;ll assess your needs and provide detailed recommendations.',
+                  description: 'Schedule your free estimate. We will assess your needs and provide detailed recommendations.',
                 },
                 {
                   step: '02',
