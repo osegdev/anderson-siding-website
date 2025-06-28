@@ -12,9 +12,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
             Expert Siding & Gutter Solutions
           </h1>
-          <p className="mt-6 text-xl md:text-2xl font-light text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Serving all of Illinois with licensed, high-quality work that transforms your home
-          </p>
+          <p className="mt-6 text-xl md:text-2xl font-light text-blue-100 max-w-2xl mx-auto leading-relaxed">Serving all of Illinois with licensed, high-quality work that transforms your home</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
             <Link href="/contact">
               <button className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-10 py-4 rounded-full font-semibold text-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
