@@ -5,16 +5,17 @@ import { CheckCircle, Star, Shield, Clock } from 'lucide-react';
 export default function ServicesPage() {
   const mainServices = [
     {
-      title: 'Vinyl Siding Installation',
-      description: 'Transform your home with premium vinyl siding that combines beauty, durability, and energy efficiency.',
+      title: 'Siding Installation & Replacement',
+      description: 'Transform your home with premium siding solutions including vinyl, fiber cement, wood, and composite materials.',
       features: [
-        'Premium vinyl materials with 30+ year warranties',
-        'Wide selection of colors and textures',
+        'Vinyl, fiber cement, wood, and composite siding options',
+        'Premium materials with extended warranties',
+        'Wide selection of colors, textures, and styles',
         'Expert installation with proper insulation',
-        'Low maintenance and weather-resistant',
+        'Low maintenance and weather-resistant solutions',
         'Increased home value and curb appeal',
       ],
-      benefits: 'Energy efficient, cost-effective, and virtually maintenance-free',
+      benefits: 'Versatile options for every budget and aesthetic preference',
       icon: '🏠',
       price: 'Competitive pricing - Free estimates',
     },
@@ -100,7 +101,10 @@ export default function ServicesPage() {
     <>
       <Head>
         <title>Professional Siding Services in Illinois – Anderson Siding and Construction</title>
-        <meta name="description" content="Expert siding, gutter, soffit & fascia services across Illinois. Licensed contractors with 20+ years experience. Free quotes available." />
+        <meta
+          name="description"
+          content="Expert siding (vinyl, fiber cement, wood, composite), gutter, soffit & fascia services across Illinois. Licensed contractors with 20+ years experience. Free quotes available."
+        />
       </Head>
 
       <main>
@@ -110,7 +114,7 @@ export default function ServicesPage() {
           <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">Professional Siding Services</h1>
             <p className="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your Illinois home with expert siding, gutter, and exterior services. Licensed, insured, and committed to excellence.
+              Transform your Illinois home with expert siding (vinyl, fiber cement, wood, composite), gutter, and exterior services. Licensed, insured, and committed to excellence.
             </p>
             <Link href="/contact">
               <button className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-xl">
