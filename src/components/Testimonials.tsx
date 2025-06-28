@@ -33,7 +33,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700 mb-6">What Our Clients Say</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Don't just take our word for it - hear from satisfied customers across Illinois</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Don&apos;t just take our word for it - hear from satisfied customers across Illinois</p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((t, i) => (
@@ -45,7 +45,7 @@ export default function Testimonials() {
               <div className="relative z-10">
                 <div className="flex justify-center mb-6">{renderStars(t.rating)}</div>
                 <blockquote className="text-center">
-                  <p className="text-lg text-gray-700 italic leading-relaxed mb-6">"{t.text}"</p>
+                  <p className="text-lg text-gray-700 italic leading-relaxed mb-6">&ldquo;{t.text}&rdquo;</p>
                   <footer className="border-t border-gray-200 pt-6">
                     <div className="font-bold text-xl text-gray-900">{t.name}</div>
                     <div className="text-blue-600 font-medium">{t.location}</div>

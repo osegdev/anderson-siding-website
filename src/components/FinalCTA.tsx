@@ -12,7 +12,7 @@ export default function FinalCTA() {
         <div className="backdrop-blur-sm bg-white/5 rounded-3xl p-12 border border-white/20">
           <h2 className="text-6xl font-black mb-8 leading-tight">Ready to Start Your Project?</h2>
           <p className="mb-12 text-2xl font-light leading-relaxed max-w-3xl mx-auto">
-            Transform your home with Illinois' most trusted siding experts. Get your free quote today and see the difference quality makes.
+            Transform your home with Illinois&apos; most trusted siding experts. Get your free quote today and see the difference quality makes.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link href="/contact">

@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700 mb-6">Why Choose Us</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Experience the difference of working with Illinois' most trusted siding professionals</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Experience the difference of working with Illinois&apos; most trusted siding professionals</p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {items.map((item, index) => (
