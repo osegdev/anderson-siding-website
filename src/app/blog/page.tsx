@@ -3,16 +3,25 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import { getAllPosts, PostMeta } from '@/lib/getPosts';
+import { PostMeta } from '@/lib/getPosts';
 import { Calendar, User, ArrowRight, BookOpen, TrendingUp, Star, Clock } from 'lucide-react';
 
 export default function BlogPage() {
   const [posts, setPosts] = useState<PostMeta[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const fetchedPosts = await getAllPosts();
-      setPosts(fetchedPosts);
+      try {
+        const response = await fetch('/api/posts');
+        const fetchedPosts = await response.json();
+        setPosts(fetchedPosts);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+        setPosts([]);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchPosts();
@@ -139,7 +148,24 @@ export default function BlogPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Stay informed with our latest insights and expert advice</p>
             </div>
 
-            {posts.length > 0 ? (
+            {loading ? (
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/50 overflow-hidden animate-pulse">
+                    <div className="p-8">
+                      <div className="h-4 bg-gray-200 rounded mb-4 w-24"></div>
+                      <div className="h-6 bg-gray-200 rounded mb-4"></div>
+                      <div className="h-4 bg-gray-200 rounded mb-2"></div>
+                      <div className="h-4 bg-gray-200 rounded mb-6 w-3/4"></div>
+                      <div className="flex justify-between">
+                        <div className="h-4 bg-gray-200 rounded w-20"></div>
+                        <div className="h-4 bg-gray-200 rounded w-16"></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : posts.length > 0 ? (
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
                   <Link
