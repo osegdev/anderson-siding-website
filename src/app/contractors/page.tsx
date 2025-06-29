@@ -70,7 +70,7 @@ export default function ContractorsPage() {
 
   const stats = [
     {
-      number: '20+',
+      number: '10+',
       label: 'Years Experience',
       icon: <Award className="w-8 h-8 text-blue-600" />,
     },
@@ -372,8 +372,8 @@ export default function ContractorsPage() {
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Email Us</h3>
-                  <a href="mailto:contractors@andersonsiding.com" className="text-blue-600 font-semibold hover:text-indigo-600 transition-colors duration-300">
-                    contractors@andersonsiding.com
+                  <a href="mailto:andersonsidingconstruction@gmail.com" className="text-blue-600 font-semibold hover:text-indigo-600 transition-colors duration-300">
+                    andersonsidingconstruction@gmail.com
                   </a>
                 </div>
 

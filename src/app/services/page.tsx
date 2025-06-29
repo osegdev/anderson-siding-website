@@ -103,7 +103,7 @@ export default function ServicesPage() {
         <title>Professional Siding Services in Illinois – Anderson Siding and Construction</title>
         <meta
           name="description"
-          content="Expert siding (vinyl, fiber cement, wood, composite), gutter, soffit & fascia services across Illinois. Licensed contractors with 20+ years experience. Free quotes available."
+          content="Expert siding (vinyl, fiber cement, wood, composite), gutter, soffit & fascia services across Illinois. Licensed contractors with 10+ years experience. Free quotes available."
         />
       </Head>
 

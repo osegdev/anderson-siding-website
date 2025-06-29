@@ -135,7 +135,7 @@ export default function PortfolioPage() {
       icon: <Star className="w-8 h-8 text-blue-600" />,
     },
     {
-      number: '20+',
+      number: '10+',
       label: 'Years Experience',
       icon: <Clock className="w-8 h-8 text-blue-600" />,
     },
@@ -152,7 +152,7 @@ export default function PortfolioPage() {
     <>
       <Head>
         <title>Our Work Portfolio – Anderson Siding Projects Across Illinois</title>
-        <meta name="description" content="View our portfolio of completed siding, gutter, soffit and exterior projects across Illinois. Quality craftsmanship and satisfied customers since 2004." />
+        <meta name="description" content="View our portfolio of completed siding, gutter, soffit and exterior projects across Illinois. Quality craftsmanship and satisfied customers since 2016." />
       </Head>
 
       <main>

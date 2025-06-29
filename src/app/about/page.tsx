@@ -5,7 +5,7 @@ import { Shield, Award, Users, MapPin, Clock, CheckCircle, Star, Heart } from 'l
 export default function AboutPage() {
   const stats = [
     {
-      number: '20+',
+      number: '10+',
       label: 'Years Experience',
       icon: <Clock className="w-8 h-8 text-blue-600" />,
     },
@@ -72,17 +72,17 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: '2004',
+      year: '2016',
       title: 'Company Founded',
       description: 'Anderson Siding and Construction was established with a vision to provide exceptional siding services to Illinois homeowners.',
     },
     {
-      year: '2008',
+      year: '2017',
       title: 'Licensed & Bonded',
       description: 'Achieved full licensing and bonding, establishing trust and credibility in the Illinois construction industry.',
     },
     {
-      year: '2015',
+      year: '2019',
       title: 'Expanded Services',
       description: 'Added comprehensive exterior services including gutters, soffit, fascia, and storm damage restoration.',
     },
@@ -101,8 +101,8 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Anderson Siding and Construction – Illinois Siding Experts Since 2004</title>
-        <meta name="description" content="Learn about Anderson Siding and Construction, Illinois' trusted siding contractors since 2004. Licensed, insured, and committed to quality craftsmanship." />
+        <title>About Anderson Siding and Construction – Illinois Siding Experts Since 2016</title>
+        <meta name="description" content="Learn about Anderson Siding and Construction, Illinois' trusted siding contractors since 2016. Licensed, insured, and committed to quality craftsmanship." />
       </Head>
 
       <main>
@@ -112,7 +112,7 @@ export default function AboutPage() {
           <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">About Anderson Siding</h1>
             <p className="text-xl md:text-2xl font-light mb-8 max-w-4xl mx-auto leading-relaxed">
-              Illinois&apos; trusted siding experts since 2004. Licensed, insured, and committed to transforming homes with quality craftsmanship and honest service.
+              Illinois&apos; trusted siding experts since 2016. Licensed, insured, and committed to transforming homes with quality craftsmanship and honest service.
             </p>
           </div>
         </section>
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700 mb-6">Our Story</h2>
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p className="text-lg">
-                    Anderson Siding and Construction was founded in 2004 with a simple mission: to provide Illinois homeowners with exceptional siding services backed by honest communication and
+                    Anderson Siding and Construction was founded in 2016 with a simple mission: to provide Illinois homeowners with exceptional siding services backed by honest communication and
                     superior craftsmanship.
                   </p>
                   <p>
