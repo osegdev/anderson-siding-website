@@ -1,16 +1,22 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { getAllPosts, PostMeta } from '@/lib/getPosts';
 import { Calendar, User, ArrowRight, BookOpen, TrendingUp, Star, Clock } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Siding & Construction Blog – Expert Tips & Industry Insights | Anderson Siding',
-  description: "Expert insights on siding installation, home maintenance, storm damage repair, and construction trends from Illinois' trusted siding professionals.",
-};
+export default function BlogPage() {
+  const [posts, setPosts] = useState<PostMeta[]>([]);
 
-export default async function BlogPage() {
-  const posts: PostMeta[] = await getAllPosts();
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const fetchedPosts = await getAllPosts();
+      setPosts(fetchedPosts);
+    };
+
+    fetchPosts();
+  }, []);
 
   const blogCategories = [
     {
