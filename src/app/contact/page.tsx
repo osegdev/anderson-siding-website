@@ -49,10 +49,10 @@ export default function ContactPage() {
     },
     {
       icon: <Mail className="w-8 h-8 text-blue-600" />,
-      title: 'Email Us',
-      details: 'andersonsidingconstruction@gmail.com',
-      description: 'Send us your project details for a detailed quote',
-      action: 'mailto:andersonsidingconstruction@gmail.com',
+      title: 'Send Message',
+      details: 'Online Contact Form',
+      description: 'Fill out our form below for a detailed project quote',
+      action: null,
     },
     {
       icon: <MapPin className="w-8 h-8 text-blue-600" />,
